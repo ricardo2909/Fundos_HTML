@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Fundos</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/script.js" defer></script>
+</head>
+<body>
+    <h1>Consulta de Fundos</h1>
+    <form id="fundos-form">
+        <div class="form-group">
+            <label for="consulta-tipo">Consultar por:</label>
+            <select id="consulta-tipo" name="consulta-tipo">
+                <option value="CNPJ">CNPJ</option>
+                <option value="NOME">Nome</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="consulta-data">Selecione a data que deseja consultar:</label>
+            <input type="date" id="consulta-data" name="consulta-data" required>
+        </div>
+        <div class="form-group">
+            <label for="consulta-cnpj">CNPJ do fundo:</label>
+            <input type="text" id="consulta-cnpj" name="consulta-cnpj">
+        </div>
+        <div class="form-group">
+            <label for="consulta-nome">Nome do fundo:</label>
+            <input type="text" id="consulta-nome" name="consulta-nome">
+        </div>
+        <button type="submit">Consultar</button>
+    </form>
+    <div id="resultados">
+        <table id="resultados-tabela">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>CNPJ</th>
+                    <th>Nome</th>
+                    <th>Valor da Quota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os resultados da consulta serão inseridos aqui pelo JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
